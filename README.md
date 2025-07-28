@@ -66,7 +66,7 @@ XBlocks](https://docs.tutor.overhang.io/configuration.html#installing-extra-xblo
 Then, to install this plugin, run:
 
 ```
-pip install git+https://github.com/hastexo/tutor-contrib-hastexo@v2.2.0
+pip install git+https://github.com/hastexo/tutor-contrib-hastexo@v2.3.0
 ```
 
 To enable this plugin, run:
