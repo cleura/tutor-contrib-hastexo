@@ -1,6 +1,6 @@
 FROM {{ HASTEXO_BASE_IMAGE }}
 ENV PYTHONUNBUFFERED 1
-ARG HASTEXO_XBLOCK_GIT_REPOSITORY=https://github.com/hastexo/hastexo-xblock.git
+ARG HASTEXO_XBLOCK_GIT_REPOSITORY=https://github.com/cleura/hastexo-xblock.git
 ARG HASTEXO_XBLOCK_VERSION={{ HASTEXO_XBLOCK_VERSION }}
 RUN git clone $HASTEXO_XBLOCK_GIT_REPOSITORY -b $HASTEXO_XBLOCK_VERSION ./hastexo-xblock
 WORKDIR ./hastexo-xblock

@@ -1,14 +1,16 @@
-Tutor plugin for the [Hastexo Guacamole Client](https://github.com/hastexo/hastexo-xblock/tree/master/hastexo_guacamole_client)
+Tutor plugin for the [Hastexo Guacamole Client](https://github.com/cleura/hastexo-xblock/tree/master/hastexo_guacamole_client)
 ===============================================
 
 
 This is a plugin for [Tutor](https://docs.tutor.overhang.io) that
 deploys the [Hastexo Guacamole
-Client](https://github.com/hastexo/hastexo-xblock/tree/master/hastexo_guacamole_client)
+Client](https://github.com/cleura/hastexo-xblock/tree/master/hastexo_guacamole_client)
 application alongside Open edX.  Using this plugin is neccessary for
 running the [Hastexo
-XBlock](https://github.com/hastexo/hastexo-xblock) in your Tutor Open
+XBlock](https://github.com/cleura/hastexo-xblock) in your Tutor Open
 edX platform.
+
+This repository was previously hosted under the `hastexo` GitHub organization, and moved to `cleura` in December 2025 as part of a routine repository consolidation.
 
 Version compatibility matrix
 ----------------------------
@@ -40,13 +42,13 @@ Installation
 
 First of all, before installing this plugin, make sure you have
 installed the [Hastexo
-XBlock](https://github.com/hastexo/hastexo-xblock) to your Open edX
+XBlock](https://github.com/cleura/hastexo-xblock) to your Open edX
 platform running with Tutor. For that, add the XBlock to your
 `OPENEDX_EXTRA_PIP_REQUIREMENTS` in `config.yml`:
 
 ```
 OPENEDX_EXTRA_PIP_REQUIREMENTS:
-- git+https://github.com/hastexo/hastexo-xblock.git
+- git+https://github.com/cleura/hastexo-xblock.git
 ```
 
 rebuild the `openedx` docker image:
@@ -66,7 +68,7 @@ XBlocks](https://docs.tutor.overhang.io/configuration.html#installing-extra-xblo
 Then, to install this plugin, run:
 
 ```
-pip install git+https://github.com/hastexo/tutor-contrib-hastexo@v2.3.0
+pip install git+https://github.com/cleura/tutor-contrib-hastexo@v2.3.0
 ```
 
 To enable this plugin, run:
@@ -90,7 +92,7 @@ Configuration
 
 * `HASTEXO_XBLOCK_SETTINGS`: The Hastexo XBlock settings, examples and
   details provided in the [XBlock
-  README](https://github.com/hastexo/hastexo-xblock#deployment). (default:
+  README](https://github.com/cleura/hastexo-xblock#deployment). (default:
   `{}`)
 * `HASTEXO_XBLOCK_VERSION`: The Hastexo XBlock version. (default:
   `stable`)

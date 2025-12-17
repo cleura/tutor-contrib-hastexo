@@ -13,11 +13,11 @@ def load_readme():
 setup(
     name="tutor-contrib-hastexo",
     use_scm_version=True,
-    url="https://github.com/hastexo/tutor-contrib-hastexo",
+    url="https://github.com/cleura/tutor-contrib-hastexo",
     project_urls={
-        "Code": "https://github.com/hastexo/tutor-contrib-hastexo",
+        "Code": "https://github.com/cleura/tutor-contrib-hastexo",
         "Issue tracker":
-            "https://github.com/hastexo/tutor-contrib-hastexo/issues",
+            "https://github.com/cleura/tutor-contrib-hastexo/issues",
     },
     license="AGPLv3",
     author="Maari Tamm",
