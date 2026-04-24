@@ -1,0 +1,2 @@
+XBLOCK_SETTINGS["stackamole"] = {{ STACKAMOLE_XBLOCK_SETTINGS }}
+INSTALLED_APPS.append("stackamole")

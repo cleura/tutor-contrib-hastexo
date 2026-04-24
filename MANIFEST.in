@@ -1,2 +1,2 @@
-recursive-include tutorhastexo/patches *
-recursive-include tutorhastexo/templates *
+recursive-include tutorstackamole/patches *
+recursive-include tutorstackamole/templates *

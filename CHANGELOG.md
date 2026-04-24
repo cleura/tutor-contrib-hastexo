@@ -1,3 +1,8 @@
+Unreleased
+----------------------------
+* [BREAKING CHANGE] Rename to `tutor-contrib-stackamole`.
+  The steps for operators to migrate from the `hastexo` to the `stackamole` plugin are defined in the `MIGRATION.md` file.
+
 # Version 2.4.0 (2026-01-23)
 
 * [Enhancement] Support Tutor 21 and Open edX Ulmo.

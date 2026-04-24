@@ -16,10 +16,10 @@ config = {
     "defaults": {
         "VERSION": __version__,
         "GUACD_VERSION": "1.5.5",
-        "GUACD_BASE_IMAGE": "guacamole/guacd:{{ HASTEXO_GUACD_VERSION }}",
-        "GUACD_DOCKER_IMAGE": "{{ HASTEXO_GUACD_BASE_IMAGE }}",
+        "GUACD_BASE_IMAGE": "guacamole/guacd:{{ STACKAMOLE_GUACD_VERSION }}",
+        "GUACD_DOCKER_IMAGE": "{{ STACKAMOLE_GUACD_BASE_IMAGE }}",
         "BASE_IMAGE": "docker.io/python:3.11",
-        "DOCKER_IMAGE": "{{ DOCKER_REGISTRY }}hastexo:{{ HASTEXO_VERSION }}",
+        "DOCKER_IMAGE": "{{ DOCKER_REGISTRY }}stackamole:{{ STACKAMOLE_VERSION }}",  # noqa: E501
         "XBLOCK_VERSION": "stable",
         "DEBUG": False,
         "REPLICA_COUNT": 1,
@@ -29,14 +29,14 @@ config = {
 }
 
 image_tags = {
-    "hastexo": "{{ HASTEXO_DOCKER_IMAGE }}",
-    "guacd": "{{ HASTEXO_GUACD_DOCKER_IMAGE }}",
+    "stackamole": "{{ STACKAMOLE_DOCKER_IMAGE }}",
+    "guacd": "{{ STACKAMOLE_GUACD_DOCKER_IMAGE }}",
 }
 
 for image, tag in image_tags.items():
     hooks.Filters.IMAGES_BUILD.add_item((
         image,
-        ("plugins", "hastexo", "build", image),
+        ("plugins", "stackamole", "build", image),
         tag,
         (),
     ))
@@ -45,18 +45,18 @@ for image, tag in image_tags.items():
 
 # Add the "templates" folder as a template root
 hooks.Filters.ENV_TEMPLATE_ROOTS.add_item(
-    str(importlib_resources.files("tutorhastexo") / "templates")
+    str(importlib_resources.files("tutorstackamole") / "templates")
 )
 # Render the "build" and "apps" folders
 hooks.Filters.ENV_TEMPLATE_TARGETS.add_items(
     [
-        ("hastexo/build", "plugins"),
-        ("hastexo/apps", "plugins"),
+        ("stackamole/build", "plugins"),
+        ("stackamole/apps", "plugins"),
     ],
 )
 # Load patches from files
 for path in glob(str(
-        importlib_resources.files("tutorhastexo") / "patches" / "*")):
+        importlib_resources.files("tutorstackamole") / "patches" / "*")):
 
     with open(path, encoding="utf-8") as patch_file:
         hooks.Filters.ENV_PATCHES.add_item(
@@ -65,13 +65,13 @@ for path in glob(str(
 # Add configuration entries
 hooks.Filters.CONFIG_DEFAULTS.add_items(
     [
-        (f"HASTEXO_{key}", value)
+        (f"STACKAMOLE_{key}", value)
         for key, value in config.get("defaults", {}).items()
     ]
 )
 hooks.Filters.CONFIG_UNIQUE.add_items(
     [
-        (f"HASTEXO_{key}", value)
+        (f"STACKAMOLE_{key}", value)
         for key, value in config.get("unique", {}).items()
     ]
 )

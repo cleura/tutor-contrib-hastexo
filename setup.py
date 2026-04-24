@@ -11,17 +11,17 @@ def load_readme():
 
 
 setup(
-    name="tutor-contrib-hastexo",
+    name="tutor-contrib-stackamole",
     use_scm_version=True,
-    url="https://github.com/cleura/tutor-contrib-hastexo",
+    url="https://github.com/cleura/tutor-contrib-stackamole",
     project_urls={
-        "Code": "https://github.com/cleura/tutor-contrib-hastexo",
+        "Code": "https://github.com/cleura/tutor-contrib-stackamole",
         "Issue tracker":
-            "https://github.com/cleura/tutor-contrib-hastexo/issues",
+            "https://github.com/cleura/tutor-contrib-stackamole/issues",
     },
     license="AGPLv3",
     author="Maari Tamm",
-    description="hastexo plugin for Tutor",
+    description="Stackamole plugin for Tutor",
     long_description=load_readme(),
     long_description_content_type='text/markdown',
     packages=find_packages(exclude=["tests*"]),
@@ -31,7 +31,7 @@ setup(
     setup_requires=["setuptools-scm"],
     entry_points={
         "tutor.plugin.v1": [
-            "hastexo = tutorhastexo.plugin"
+            "stackamole = tutorstackamole.plugin"
         ]
     },
     classifiers=[

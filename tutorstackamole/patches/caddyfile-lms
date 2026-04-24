@@ -1,0 +1,3 @@
+handle /stackamole-xblock* {
+    reverse_proxy stackamole-xblock:8095
+}

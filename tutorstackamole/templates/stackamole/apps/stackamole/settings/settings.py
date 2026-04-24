@@ -6,8 +6,8 @@ from distutils.util import strtobool
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
-SECRET_KEY = "{{ HASTEXO_SECRET_KEY }}"
-DEBUG = bool(strtobool("{{ HASTEXO_DEBUG }}"))
+SECRET_KEY = "{{ STACKAMOLE_SECRET_KEY }}"
+DEBUG = bool(strtobool("{{ STACKAMOLE_DEBUG }}"))
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -52,12 +52,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'channels',
-    'hastexo_guacamole_client'
+    'stackamole_guacamole_client'
 ]
 
-ASGI_APPLICATION = 'hastexo_guacamole_client.asgi:application'
+ASGI_APPLICATION = 'stackamole_guacamole_client.asgi:application'
 
 XBLOCK_SETTINGS = {
-    "hastexo": json.loads(
-        """{{ HASTEXO_XBLOCK_SETTINGS | tojson(indent=4) }}""")
+    "stackamole": json.loads(
+        """{{ STACKAMOLE_XBLOCK_SETTINGS | tojson(indent=4) }}""")
 }

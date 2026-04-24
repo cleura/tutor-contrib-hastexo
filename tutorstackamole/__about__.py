@@ -5,4 +5,4 @@ from importlib import metadata
 # Single-source package definition as suggested (among several
 # options) by:
 # https://packaging.python.org/guides/single-sourcing-package-version/
-__version__ = metadata.version('tutor-contrib-hastexo')
+__version__ = metadata.version('tutor-contrib-stackamole')

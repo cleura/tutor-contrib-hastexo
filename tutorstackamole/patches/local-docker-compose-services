@@ -1,28 +1,28 @@
 ############# guacd
 guacd:
-  image: {{ HASTEXO_GUACD_DOCKER_IMAGE }}
+  image: {{ STACKAMOLE_GUACD_DOCKER_IMAGE }}
   restart: unless-stopped
   ports:
     - 4822:4822
 
-############# hastexo-guacamole-client
-hastexo-xblock:
-  image: {{ HASTEXO_DOCKER_IMAGE }}
+############# stackamole-guacamole-client
+stackamole-xblock:
+  image: {{ STACKAMOLE_DOCKER_IMAGE }}
   environment:
-    DJANGO_SETTINGS_MODULE: hastexo_guacamole_client.tutor.settings
+    DJANGO_SETTINGS_MODULE: stackamole_guacamole_client.tutor.settings
   restart: unless-stopped
   ports:
     - "8085-8095:8095"
   volumes:
-    - ../plugins/hastexo/apps/hastexo/settings:/hastexo-xblock/hastexo_guacamole_client/tutor:ro
+    - ../plugins/stackamole/apps/stackamole/settings:/stackamole-xblock/stackamole_guacamole_client/tutor:ro
   depends_on:
     - guacd
     - mysql
   deploy:
-    replicas: {{ HASTEXO_REPLICA_COUNT }}
+    replicas: {{ STACKAMOLE_REPLICA_COUNT }}
 
 ############# suspender
-hastexo-xblock-suspender:
+stackamole-xblock-suspender:
   image: {{ DOCKER_IMAGE_OPENEDX }}
   environment:
     SERVICE_VARIANT: lms
@@ -41,10 +41,10 @@ hastexo-xblock-suspender:
     {% if RUN_MYSQL %}- mysql{% endif %}
     {% if RUN_REDIS %}- redis{% endif %}
   deploy:
-    replicas: {% if HASTEXO_ENABLE_SUSPENDER %}1{% else %}0{% endif %}
+    replicas: {% if STACKAMOLE_ENABLE_SUSPENDER %}1{% else %}0{% endif %}
 
 ############# reaper
-hastexo-xblock-reaper:
+stackamole-xblock-reaper:
   image: {{ DOCKER_IMAGE_OPENEDX }}
   environment:
     SERVICE_VARIANT: lms
@@ -63,5 +63,5 @@ hastexo-xblock-reaper:
     {% if RUN_MYSQL %}- mysql{% endif %}
     {% if RUN_REDIS %}- redis{% endif %}
   deploy:
-    replicas: {% if HASTEXO_ENABLE_REAPER %}1{% else %}0{% endif %}
+    replicas: {% if STACKAMOLE_ENABLE_REAPER %}1{% else %}0{% endif %}
 

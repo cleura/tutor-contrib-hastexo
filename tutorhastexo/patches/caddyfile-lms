@@ -1,3 +1,0 @@
-handle /hastexo-xblock* {
-    reverse_proxy hastexo-xblock:8095
-}
