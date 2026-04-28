@@ -98,3 +98,22 @@ rm dist/* -f
 ./setup.py sdist
 twine upload dist/*
 ```
+
+## AI assistance
+
+You may use AI assistance for modifications to this repo.
+However, you retain full responsibility for your contribution.
+
+You must declare AI assistance (identifying both the tool and the model you used) in your commit message in an `Assisted-by:` line, as in the following example:
+
+```patch
+feat: Add superfrobnication
+
+Add superfrobnication support to the XBlock.
+
+Assisted-by: coding-assistant/blerg3.6-coder
+```
+
+You must configure your tool to read, parse and follow the instructions in [`AGENTS.md`](AGENTS.md).
+Most agentic coding assistants do this by default.
+If yours does not, create appropriate symlinks (like `CLAUDE.md`).
