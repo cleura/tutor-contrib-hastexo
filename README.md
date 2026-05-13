@@ -51,7 +51,7 @@ For more information about installing XBlocks, please refer to the [Tutor docume
 Then, to install this plugin, run:
 
 ```bash
-pip install git+https://github.com/cleura/tutor-contrib-hastexo@v2.4.0
+pip install git+https://github.com/cleura/tutor-contrib-stackamole@v3.0.0
 ```
 
 To enable this plugin, run:

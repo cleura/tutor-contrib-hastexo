@@ -1,4 +1,4 @@
-Unreleased
+Version 3.0.0 (2026-05-13)
 ----------------------------
 * [BREAKING CHANGE] Rename to `tutor-contrib-stackamole`.
   The steps for operators to migrate from the `hastexo` to the `stackamole` plugin are defined in the `MIGRATION.md` file.
