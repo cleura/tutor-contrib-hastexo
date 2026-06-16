@@ -1,4 +1,4 @@
-# Unreleased
+# Version 3.1.0 (2026-06-16)
 
 * [Enhancement] Add support for Content Libraries v2.
 
