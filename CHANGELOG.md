@@ -1,3 +1,7 @@
+# Unreleased
+
+* [Testing] Set skip_missing_interpreters = true for tox, so that it runs with whatever Python is available.
+
 # Version 3.1.0 (2026-06-16)
 
 * [Enhancement] Add support for Content Libraries v2.
