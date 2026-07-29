@@ -1,4 +1,4 @@
-# Unreleased
+# Version 3.2.0 (2026-07-29)
 
 * [Enhancement] Patch the `openedx` Dockerfile to include and compile translations.
 * [Testing] Set skip_missing_interpreters = true for tox, so that it runs with whatever Python is available.
