@@ -1,3 +1,7 @@
+# Unreleased
+
+* [Enhancement] Support Tutor 22 and Open edX Verawood.
+
 # Version 3.2.0 (2026-07-29)
 
 * [Enhancement] Patch the `openedx` Dockerfile to include and compile translations.
