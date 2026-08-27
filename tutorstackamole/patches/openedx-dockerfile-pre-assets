@@ -1,4 +1,4 @@
-RUN cp -a /openedx/venv/lib/python3.11/site-packages/stackamole/locale/. /openedx/edx-platform/conf/plugins-locale/xblock.v1/stackamole/
+RUN cp -a /openedx/venv/lib/python3.12/site-packages/stackamole/locale/. /openedx/edx-platform/conf/plugins-locale/xblock.v1/stackamole/
 
 RUN ./manage.py lms --settings=tutor.i18n compile_xblock_translations
 RUN ./manage.py lms --settings=tutor.i18n compilejsi18n
