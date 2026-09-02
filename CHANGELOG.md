@@ -1,4 +1,4 @@
-# Unreleased
+# Version 3.3.0 (2026-09-02)
 
 * [Enhancement] Support Tutor 22 and Open edX Verawood.
 

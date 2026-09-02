@@ -24,7 +24,7 @@ If you are installing this plugin from a branch in this Git repository, you must
 | Teak             | `>=20.0, <21`     | `hastexo-xblock>=8.5, <9.0` | `ulmo`        | `>=2.3`        |
 | Ulmo             | `>=21.0, <22`     | `hastexo-xblock>=8.6, <9.0` | `ulmo`        | `>=2.4`        |
 | Ulmo             | `>=21.0, <22`     | `stackamole-xblock>=9.0.0`  | `main`        | `>=3.0`        |
-| Verawood         | `>=22.0, <23`     | `stackamole-xblock>=9.0.0`  | `main`        | `>=3.1`        |
+| Verawood         | `>=22.0, <23`     | `stackamole-xblock>=9.0.0`  | `main`        | `>=3.3`        |
 
 [^1]: For Open edX Maple and Tutor 13, you must run version 13.2.0 or later.
       That is because this plugin uses the Tutor v1 plugin API, [which was introduced with that release](https://github.com/overhangio/tutor/blob/master/CHANGELOG.md#v1320-2022-04-24).
@@ -52,7 +52,7 @@ For more information about installing XBlocks, please refer to the [Tutor docume
 Then, to install this plugin, run:
 
 ```bash
-pip install git+https://github.com/cleura/tutor-contrib-stackamole@v3.2.0
+pip install git+https://github.com/cleura/tutor-contrib-stackamole@v3.3.0
 ```
 
 To enable this plugin, run:
